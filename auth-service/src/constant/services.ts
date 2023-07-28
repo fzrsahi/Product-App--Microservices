@@ -1,0 +1,1 @@
+export const USER_PERSISTANCE_SERVICE = 'USER';
