@@ -1,0 +1,13 @@
+version: '3.7'
+services: 
+ minio:
+    image: quay.io/minio/minio
+    ports:
+      - "9000:9000"
+      - "9090:9090"
+    environment:
+      - MINIO_ROOT_USER=guest
+      - MINIO_ROOT_PASSWORD=12345678
+    volumes:
+      - ${HOME}/minio/thinkspedia:/data
+    command: server /data --console-address ":9090"
